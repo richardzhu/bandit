@@ -1,0 +1,18 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Jedi - Python autocompletion",
+		"Julia",
+		"LaTeXTools",
+		"Package Control",
+		"Pylinter",
+		"Solarized Color Scheme",
+		"SublimeLinter",
+		"SublimeLinter-annotations",
+		"SublimeREPL"
+	]
+}
