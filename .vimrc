@@ -52,3 +52,6 @@ match OverLength /\%80v.\+/
 " let g:vimtex_view_method = 'zathura'
 let g:vimtex_view_method = 'skim'
 
+" change to Dropbox folder
+map <leader>dr :cd ~/Dropbox/<cr>
+
