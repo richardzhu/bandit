@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/richard-zhu/.oh-my-zsh
+  export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -84,9 +84,15 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ls='ls --color=auto -Gp'
+# alias ls='ls --color=auto -Gp'
+alias ls='ls -Gp'
 alias rm='rm -i'
 
 # set DEFAULT_USER so agnoster theme recognizes logged-in user
-export DEFAULT_USER=richard-zhu
-alias config='/usr/bin/git --git-dir=/home/richard-zhu/.dotfiles/ --work-tree=/home/richard-zhu'
+# rigetti Ubuntu
+# export DEFAULT_USER=richard-zhu
+# mac OS X user
+export DEFAULT_USER=richardzhu
+
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+

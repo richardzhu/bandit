@@ -10,9 +10,13 @@ source ~/.vim_runtime/my_configs.vim
 catch
 endtry
 
+" Solarized dark colorscheme
 syntax enable
 set background=dark
 colorscheme solarized
+
+" Mac OSX clipboard fix...
+set clipboard=unnamed
 
 """ Custom keys/shortcuts
 
@@ -45,5 +49,6 @@ match OverLength /\%80v.\+/
 " endfunction
 
 " vim zathura viewer
-let g:vimtex_view_method = 'zathura'
+" let g:vimtex_view_method = 'zathura'
+let g:vimtex_view_method = 'skim'
 
