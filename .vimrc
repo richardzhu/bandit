@@ -32,8 +32,11 @@ map <C-n> :NERDTreeToggle<CR>
 " nmap <silent> <A-Right> :wincmd l<CR>
 
 " highlight any characters over the 80 character line!
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%80v.\+/
+" highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+" match OverLength /\%80v.\+/
+let &colorcolumn=join(range(81,999),",")
+" highlight ColorColumn ctermbg=235 guibg=#2c2d27
+let &colorcolumn="80,".join(range(120,999),",")
 
 " LaTeX section jumping
 " noremap <buffer> <silent> ]] :<c-u>call TexJump2Section( v:count1, '' )<CR>

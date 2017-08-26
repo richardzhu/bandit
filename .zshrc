@@ -96,3 +96,4 @@ export DEFAULT_USER=richardzhu
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias cdd='cd ~/Dropbox'
+alias cddw='cd ~/Dropbox/Workspace'
