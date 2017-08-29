@@ -1,8 +1,34 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Imported from OSX .bash_profile on Aug 27, 2017
+export LDFLAGS="-L/opt/local/lib"
+
+# added by !me
+#export PATH="//anaconda/bin:$PATH"
+VIRTUAL_ENV_DISABLE_PROMPT=1 source /Users/richardzhu/Library/Enthought/Canopy_64bit/User/bin/activate
+
+# Setting PATH for Python 3.4
+# The orginal version is saved in .bash_profile.pysave
+# PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+# export PATH
+
+# added by Anaconda 1.9.1 installer
+# export PATH="/Users/richardzhu/anaconda/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH=/usr/local/sbin:$PATH
+alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+export ETS_TOOLKIT=qt4
+# MacPorts Installer addition on 2017-01-16_at_14:00:55: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+# using Sublime as editor for commands
+export EDITOR='subl -w'
 # Path to your oh-my-zsh installation.
-  export ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
