@@ -26,7 +26,7 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 # using Sublime as editor for commands
-export EDITOR='subl -w'
+# export EDITOR='subl -w'
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
