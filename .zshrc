@@ -5,8 +5,8 @@
 export LDFLAGS="-L/opt/local/lib"
 
 # added by !me
-#export PATH="//anaconda/bin:$PATH"
-VIRTUAL_ENV_DISABLE_PROMPT=1 source /Users/richardzhu/Library/Enthought/Canopy_64bit/User/bin/activate
+# export PATH="//anaconda/bin:$PATH"
+# VIRTUAL_ENV_DISABLE_PROMPT=1 source /Users/richardzhu/Library/Enthought/Canopy_64bit/User/bin/activate
 
 # Setting PATH for Python 3.4
 # The orginal version is saved in .bash_profile.pysave
@@ -122,4 +122,6 @@ export DEFAULT_USER=richardzhu
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias cdd='cd ~/Dropbox'
+alias cddn='cd ~/Dropbox/Notes'
 alias cddw='cd ~/Dropbox/Workspace'
+
