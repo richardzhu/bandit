@@ -15,14 +15,16 @@ export LDFLAGS="-L/opt/local/lib"
 
 # added by Anaconda 1.9.1 installer
 # export PATH="/Users/richardzhu/anaconda/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
-export PATH=/usr/local/sbin:$PATH
+
+# Homebrew path first
+export PATH=/usr/local/bin:$PATH
+# export PATH=/usr/local/sbin:$PATH
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 export ETS_TOOLKIT=qt4
 # MacPorts Installer addition on 2017-01-16_at_14:00:55: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 # using Sublime as editor for commands
@@ -58,7 +60,7 @@ ZSH_THEME="agnoster"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -124,4 +126,5 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias cdd='cd ~/Dropbox'
 alias cddn='cd ~/Dropbox/Notes'
 alias cddw='cd ~/Dropbox/Workspace'
+alias sshr='ssh richard@richardzhu.duckdns.org -p 9069'
 
