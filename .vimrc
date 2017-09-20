@@ -61,3 +61,6 @@ map <leader>dr :cd ~/Dropbox/<cr>
 " set default NERDTree size
 let g:NERDTreeWinSize = 30
 
+" recognize MD files
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+
