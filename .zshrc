@@ -94,7 +94,6 @@ alias rm='rm -i'
 export DEFAULT_USER=richard
 
 # source /opt/intel/bin/compilervars.sh intel64
-shopt -s globstar
 
 # Added by Richard Zhu on 2016-08-11
 # For XGBoost installation
