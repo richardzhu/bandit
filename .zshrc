@@ -36,6 +36,7 @@ export ZSH=$HOME/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
+# ZSH_THEME="simple"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -103,6 +104,8 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+# SUPREME
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -124,7 +127,13 @@ export DEFAULT_USER=richardzhu
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias cdd='cd ~/Dropbox'
+alias cddc='cd ~/Dropbox/Classes'
 alias cddn='cd ~/Dropbox/Notes'
 alias cddw='cd ~/Dropbox/Workspace'
 alias sshr='ssh richard@richardzhu.duckdns.org -p 9069'
+
+alias howtopandoc='echo pandoc response-1.md -f markdown -t html -s -o response-1.html'
+
+
+
 
