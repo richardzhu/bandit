@@ -64,3 +64,13 @@ let g:NERDTreeWinSize = 30
 " recognize MD files
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
+" Inspired by: https://jeffkreeftmeijer.com/vim-number/
+" Hybrid relative & absolute line numbers
+" Turned off upon entering insert mode & buffer no longer in focus
+:set number relativenumber
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
+
