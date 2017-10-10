@@ -133,7 +133,5 @@ alias cddw='cd ~/Dropbox/Workspace'
 alias sshr='ssh richard@richardzhu.duckdns.org -p 9069'
 
 alias howtopandoc='echo pandoc response-1.md -f markdown -t html -s -o response-1.html'
-
-
-
+alias 天='echo fuck'
 
