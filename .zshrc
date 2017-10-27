@@ -16,6 +16,9 @@ export LDFLAGS="-L/opt/local/lib"
 # added by Anaconda 1.9.1 installer
 # export PATH="/Users/richardzhu/anaconda/bin:$PATH"
 
+# Macports path
+export PATH=/opt/local/bin:$PATH
+
 # Homebrew path first
 export PATH=/usr/local/bin:$PATH
 # export PATH=/usr/local/sbin:$PATH
@@ -133,7 +136,7 @@ alias cddw='cd ~/Dropbox/Workspace'
 alias sshr='ssh richard@richardzhu.duckdns.org -p 9069'
 
 # Pandoc guide
-# Latex template: https://github.com/Wandmalfarbe/pandoc-latex-template
+# Latex template found at: https://github.com/Wandmalfarbe/pandoc-latex-template
 alias howtopandoc='echo pandoc example.md -f markdown -t html -s -o example.html
                    echo pandoc example.md -o example.pdf --from markdown --template eisvogel --listings'
 
