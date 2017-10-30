@@ -114,5 +114,11 @@ alias cddn='cd ~/Dropbox/Notes'
 alias cddw='cd ~/Dropbox/Workspace'
 alias sshr='ssh richard@richardzhu.duckdns.org -p 9069'
 
-alias howtopandoc='echo pandoc response-1.md -f markdown -t html -s -o response-1.html'
+# Pandoc guide
+# Latex template found at: https://github.com/Wandmalfarbe/pandoc-latex-template
+alias howtopandoc='echo pandoc example.md -f markdown -t html -s -o example.html
+                   echo pandoc example.md -o example.pdf --from markdown --template eisvogel --listings'
+alias howtofind="find . -name '*pic*'"
+
+alias 天='echo fuck'
 
