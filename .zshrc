@@ -135,6 +135,11 @@ alias cddn='cd ~/Dropbox/Notes'
 alias cddw='cd ~/Dropbox/Workspace'
 alias sshr='ssh richard@richardzhu.duckdns.org -p 9069'
 
+# Mac iTerm2 tab titling: https://superuser.com/questions/419775/with-bash-iterm2-how-to-name-tabs
+# function title {
+#     echo -ne "\033]0;"$*"\007"
+# }
+
 # Pandoc guide
 # Latex template found at: https://github.com/Wandmalfarbe/pandoc-latex-template
 alias howtopandoc='echo pandoc example.md -f markdown -t html -s -o example.html
