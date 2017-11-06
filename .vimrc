@@ -127,4 +127,7 @@ inoremap <F9> <C-O>za
 nnoremap <F9> za
 onoremap <F9> <C-C>za
 vnoremap <F9> zf
+" Make views automatic (to save folds when you close a file)
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
 
