@@ -16,7 +16,10 @@ set background=dark
 colorscheme solarized
 
 " Mac OSX clipboard fix...
-set clipboard=unnamed
+" set clipboard=unnamed
+
+" Ubuntu/Linux clipboard fix...
+set clipboard=unnamedplus
 
 """ Custom keys/shortcuts
 
@@ -113,3 +116,15 @@ let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
 " and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
 " inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+""" Markdown folding with https://github.com/nelstrom/vim-markdown-folding
+set nocompatible
+if has("autocmd")
+  filetype plugin indent on
+endif
+" Use F9 to toggle folding!
+inoremap <F9> <C-O>za
+nnoremap <F9> za
+onoremap <F9> <C-C>za
+vnoremap <F9> zf
+
