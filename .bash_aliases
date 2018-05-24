@@ -68,6 +68,7 @@ alias cdd='cd ~/Dropbox'
 alias cddc='cd ~/Dropbox/Classes'
 alias cddn='cd ~/Dropbox/Notes'
 alias cddw='cd ~/Dropbox/Workspace'
+
 alias onl='cddw && cd online'
 alias prob='cddw && cd problems'
 alias proj='cddw && cd projects'
@@ -83,7 +84,7 @@ alias howtopandoc='echo pandoc example.md -f markdown -t html -s -o example.html
                    echo pandoc example.md -o example.pdf --from markdown --template eisvogel --listings'
 
 # Jump and auto-edit notes
-alias notes='cddn && vim today.md urls.md'
+alias notes='cddn && vim today.md tasks.md anki-people-stack.md'
 
 # Janky version control for dotfiles (will replace soon)
 # Dotfiles git alias

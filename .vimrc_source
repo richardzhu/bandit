@@ -16,7 +16,9 @@ set background=dark
 colorscheme solarized
 
 " Mac OSX clipboard fix...
-set clipboard=unnamed
+" set clipboard=unnamed
+" Ubuntu clipboard fix...
+set clipboard=unnamedplus
 
 """ Custom keys/shortcuts
 
@@ -52,8 +54,8 @@ let &colorcolumn="80,".join(range(120,999),",")
 " endfunction
 
 " vim zathura viewer
-" let g:vimtex_view_method = 'zathura'
-let g:vimtex_view_method = 'skim'
+let g:vimtex_view_method = 'zathura'
+" let g:vimtex_view_method = 'skim'
 
 " change to Dropbox folder
 map <leader>dr :cd ~/Dropbox/<cr>
@@ -63,6 +65,8 @@ let g:NERDTreeWinSize = 30
 
 " recognize MD files
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+" code block syntax highlighting
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
 
 " Inspired by: https://jeffkreeftmeijer.com/vim-number/
 " Hybrid relative & absolute line numbers
@@ -114,10 +118,10 @@ let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
 " inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 """ Markdown folding with https://github.com/nelstrom/vim-markdown-folding
-set nocompatible
-if has("autocmd")
-  filetype plugin indent on
-endif
+" set nocompatible
+" if has("autocmd")
+"   filetype plugin indent on
+" endif
 " Use F9 to toggle folding!
 " inoremap <F9> <C-O>za
 " nnoremap <F9> za
@@ -130,4 +134,24 @@ vnoremap <Space> zf
 " Make views automatic (to save folds when you close a file)
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
+" # Function to permanently delete views created by 'mkview'
+" https://stackoverflow.com/questions/28384159/vim-how-to-remove-clear-views-created-by-mkview-from-inside-of-vim
+function! MyDeleteView()
+    let path = fnamemodify(bufname('%'),':p')
+    " vim's odd =~ escaping for /
+    let path = substitute(path, '=', '==', 'g')
+    if empty($HOME)
+    else
+        let path = substitute(path, '^'.$HOME, '\~', '')
+    endif
+    let path = substitute(path, '/', '=+', 'g') . '='
+    " view directory
+    let path = &viewdir.'/'.path
+    call delete(path)
+    echo "Deleted: ".path
+endfunction
+" # Command Delview (and it's abbreviation 'delview')
+command Delview call MyDeleteView()
+" Lower-case user commands: http://vim.wikia.com/wiki/Replace_a_builtin_command_using_cabbrev
+cabbrev delview <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Delview' : 'delview')<CR>
 
