@@ -7,12 +7,13 @@ alias please='sudo !!'
 # Navigation ease
 alias j="cd .."
 alias k='clear'
-alias kl='clear && l'
-alias v='vim'
-alias la='ls -lah $LS_COLOR'
-function cl(){ cd "$@" && la; }  # CD and LA
-
-# Editing dotfiles
+alias l='ls -Gphaltr'
+alias kl='clear  && l'
+alias v='vim'  
+alias la='ls -l ah $LS_COLOR'
+function cl(){  cd "$@" && la; }  # CD and LA
+               
+# Editing dotfi les
 alias zshrc='v $HOME/bandit/.zshrc_source'
 alias vimrc='v $HOME/bandit/.vimrc_source'
 alias aliases='v $HOME/bandit/.bash_aliases'
@@ -45,13 +46,17 @@ extract () {
 ### Git helpers
 function c { git checkout $@; }
 function b { git branch $@; }
-# alias s="git status"
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit -m"
+alias idk="git add . && git commit -m 'standard commit message' && git push"
+alias lolwtf="git add . && git commit -m 'yolo' && git push"
 # alias d="git diff"
 # alias dc="git diff --cached"
 # alias dv="git diff | vim -"
 # alias l="git log"
-# alias gp="git pull"
-# alias gpu="git push"
+alias gp="git pull"
+alias gpu="git push"
 
 ### Send desired directory to next terminal!
 # Use: while in one terminal, `gg` to save directory.
@@ -68,6 +73,7 @@ alias cdd='cd ~/Dropbox'
 alias cddc='cd ~/Dropbox/Classes'
 alias cddn='cd ~/Dropbox/Notes'
 alias cddw='cd ~/Dropbox/Workspace'
+alias cdb='cd ~/bandit'
 
 alias onl='cddw && cd online'
 alias prob='cddw && cd problems'
@@ -89,4 +95,7 @@ alias notes='cddn && vim today.md tasks.md anki-people-stack.md'
 # Janky version control for dotfiles (will replace soon)
 # Dotfiles git alias
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Count # of files in current directory
+alias countfiles='find . -type f | wc -l'
 
