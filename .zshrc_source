@@ -5,8 +5,8 @@ export PATH=$HOME/bandit/shell-scripts:$PATH
 
 # Load personal and work aliases
 source ~/bandit/.bash_aliases
-source ~/bandit/.bash_aliases_osx
-source ~/bandit/.bash_whisper
+# source ~/bandit/.bash_aliases_osx
+# source ~/bandit/.bash_whisper
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -33,7 +33,7 @@ export PATH=/usr/local/bin:$PATH
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
-export ETS_TOOLKIT=qt4
+# export ETS_TOOLKIT=qt4
 
 # using Sublime as editor for commands
 # export EDITOR='subl -w'
@@ -131,20 +131,20 @@ alias rm='rm -i'
 # rigetti Ubuntu
 # export DEFAULT_USER=richard-zhu
 # mac OS X user
-export DEFAULT_USER=richardzhu
+# export DEFAULT_USER=richardzhu
 
 # Mac iTerm2 tab titling: https://superuser.com/questions/419775/with-bash-iterm2-how-to-name-tabs
 # function title {
 #     echo -ne "\033]0;"$*"\007"
 # }
 
-alias 天='echo hello'
+# alias 天='echo hello'
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/richardzhu/Applications/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/richardzhu/Applications/google-cloud-sdk/path.zsh.inc'; fi
+# if [ -f '/Users/richardzhu/Applications/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/richardzhu/Applications/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/richardzhu/Applications/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/richardzhu/Applications/google-cloud-sdk/completion.zsh.inc'; fi
+# if [ -f '/Users/richardzhu/Applications/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/richardzhu/Applications/google-cloud-sdk/completion.zsh.inc'; fi
 
 # Eternal bash history.
 # ---------------------
