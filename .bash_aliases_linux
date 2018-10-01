@@ -1,2 +1,7 @@
 ### Linux-specific bashrc
 
+# get pbpaste on Ubuntu
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
+alias paste='echo $(pbpaste) >>'

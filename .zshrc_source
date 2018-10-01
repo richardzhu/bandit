@@ -4,6 +4,7 @@
 export PATH=$HOME/bandit/shell-scripts:$PATH
 
 # Load personal and work aliases
+source ~/bandit/.bash_aliases_linux
 source ~/bandit/.bash_aliases
 # source ~/bandit/.bash_aliases_osx
 # source ~/bandit/.bash_whisper
