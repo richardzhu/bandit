@@ -1,2 +1,10 @@
 ### OSX-specific bashrc
 alias mvim='vim'
+
+# Fix for pbpaste new line
+# https://apple.stackexchange.com/questions/234197/why-doesnt-pbpaste-return-cursor-at-new-line-in-bash
+alias paste='echo "$(pbpaste)" >> '
+
+# Fix for VSCode repeat key
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
