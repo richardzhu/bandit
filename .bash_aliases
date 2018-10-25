@@ -21,6 +21,9 @@ alias aliases='v $HOME/bandit/.bash_aliases'
 # Shell-scripts
 alias read='check-readme.sh'
 
+# Convenience alias for virtualenvs
+alias se='source venv/bin/activate'
+
 # Easy extract
 extract () {
   if [ -f $1 ] ; then
@@ -51,6 +54,9 @@ alias ga="git add"
 alias gc="git commit -m"
 alias idk="git add . && git commit -m 'standard commit message' && git push"
 alias lolwtf="git add . && git commit -m 'yolo' && git push"
+# cool command to get all branches ordered by most recent commit
+# https://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
+alias grr="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
 # alias d="git diff"
 # alias dc="git diff --cached"
 # alias dv="git diff | vim -"
