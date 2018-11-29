@@ -8,3 +8,6 @@ alias paste='echo "$(pbpaste)" >> '
 # Fix for VSCode repeat key
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
+# tmuxinator!
+source ~/.bin/tmuxinator.zsh
+
