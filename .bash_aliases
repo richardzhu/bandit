@@ -65,6 +65,9 @@ alias gdh="git diff HEAD"
 alias gp="git pull"
 alias gpu="git push"
 
+# https://stackoverflow.com/questions/6089294/why-do-i-need-to-do-set-upstream-all-the-time
+alias gpo="git push --set-upstream origin $(git branch | awk '/^\* / { print $2 }')"
+
 ### Send desired directory to next terminal!
 # Use: while in one terminal, `gg` to save directory.
 #      open another terminal, `hh` to go to it!
