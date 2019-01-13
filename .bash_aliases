@@ -106,7 +106,7 @@ alias notes='cddn && vim today.md tasks.md anki-people-stack.md'
 
 # Janky version control for dotfiles (will replace soon)
 # Dotfiles git alias
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+# alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Count # of files in current directory
 alias countfiles='find . -type f | wc -l'

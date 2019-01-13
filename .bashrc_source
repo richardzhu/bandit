@@ -132,4 +132,4 @@ export PYTHONPATH="${PYTHONPATH}:/home/richard-zhu/rigetti/eucalyptus"
 
 alias ls='ls -Gp'
 alias rm='rm -i'
-alias config='/usr/bin/git --git-dir=/home/richard-zhu/.dotfiles/ --work-tree=/home/richard-zhu'
+# alias config='/usr/bin/git --git-dir=/home/richard-zhu/.dotfiles/ --work-tree=/home/richard-zhu'

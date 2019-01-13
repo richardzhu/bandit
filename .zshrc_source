@@ -184,3 +184,10 @@ PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 # tmuxinator!
 source ~/.bin/tmuxinator.zsh
 
+# fixup ruby shit
+export GEM_HOME=$HOME/gems
+export PATH=$HOME/gems/bin:$PATH
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
