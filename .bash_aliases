@@ -22,7 +22,7 @@ alias aliases='v $HOME/bandit/.bash_aliases'
 alias read='check-readme.sh'
 
 # Convenience alias for virtualenvs
-alias se='source venv/bin/activate'
+alias se='source bin/activate'
 
 # Easy extract
 extract () {
