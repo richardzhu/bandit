@@ -1,0 +1,6 @@
+#!/bin/bash
+# https://stackoverflow.com/questions/12967232/repeatedly-run-a-shell-command-until-it-fails
+$@
+while [ $? -eq 0 ]; do
+    $@
+done
