@@ -1,5 +1,6 @@
 # Makes monorepo work
 source ~/code/whisper/infrastructure/repo/bashrc
+source ~/code/whisper/whisper/cli/bash_completion
 
 alias cw='cd ~/code/whisper && source venv/bin/activate'
 alias wcloud='whisper_cloud'
