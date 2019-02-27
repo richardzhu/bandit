@@ -8,7 +8,8 @@ alias please='sudo !!'
 alias j="cd .."
 alias k='clear'
 alias l='ls -Gphaltr'
-alias kl='clear  && l'
+alias kl='clear && l'  # alphabetical
+alias kll='clear && ls -Gphaltr'  # recency
 alias v='vim'  
 alias la='ls -l ah $LS_COLOR'
 function cl(){  cd "$@" && la; }  # CD and LA

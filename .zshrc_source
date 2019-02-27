@@ -129,8 +129,6 @@ alias ls='ls -Gp'
 alias rm='rm -i'
 
 # set DEFAULT_USER so agnoster theme recognizes logged-in user
-# rigetti Ubuntu
-# export DEFAULT_USER=richard-zhu
 # mac OS X user
 export DEFAULT_USER=richardzhu
 
