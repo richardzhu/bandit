@@ -8,3 +8,7 @@ alias paste='echo "$(pbpaste)" >>'
 
 # cudNN7 install on 2018/11/14
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64"
+
+# Pyenv install on 2019/03/09
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"

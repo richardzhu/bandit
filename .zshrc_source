@@ -164,3 +164,6 @@ PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 # FZF install
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
