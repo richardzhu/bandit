@@ -192,4 +192,8 @@ source ~/bandit/.bash_whisper
 
 # Go install: 2019/03/26
 export PATH=/usr/local/go/bin:$PATH
+export GOPATH=$HOME/go
+
+# GOPATH bin files! for Skicka
+export PATH=$GOPATH/bin:$PATH
 
