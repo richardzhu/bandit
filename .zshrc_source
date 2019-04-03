@@ -197,3 +197,6 @@ export GOPATH=$HOME/go
 # GOPATH bin files! for Skicka
 export PATH=$GOPATH/bin:$PATH
 
+# Emacs install (from Homebrew)
+alias emacs="/usr/local/Cellar/emacs/26.1_1/bin/emacs -nw"
+
