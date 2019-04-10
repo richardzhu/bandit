@@ -19,6 +19,8 @@ alias zshrc='v $HOME/bandit/.zshrc_source'
 alias vimrc='v $HOME/bandit/.vimrc_source'
 alias aliases='v $HOME/bandit/.bash_aliases'
 
+alias ipy='ipython'
+
 # Shell-scripts
 alias read='check-readme.sh'
 
@@ -55,6 +57,7 @@ alias ga="git add"
 alias gc="git commit -m"
 alias idk="git add . && git commit -m 'standard commit message' && git push"
 alias lolwtf="git add . && git commit -m 'yolo' && git push"
+alias yolo='git commit -m \"$(curl -s whatthecommit.com/index.txt)\"'
 # cool command to get all branches ordered by most recent commit
 # https://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
 alias grr="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
