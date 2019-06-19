@@ -200,3 +200,18 @@ export PATH=$GOPATH/bin:$PATH
 # Emacs install (from Homebrew)
 alias emacs="/usr/local/Cellar/emacs/26.1_1/bin/emacs -nw"
 
+# Notify me when long-running command finishes!
+# Mac-only: http://frantic.im/notify-on-completion
+function f_notifyme {
+  LAST_EXIT_CODE=$?
+  CMD=$(fc -ln -1)
+  # No point in waiting for the command to complete
+  notifyme "$CMD" "$LAST_EXIT_CODE" &
+}
+export PS1='$(f_notifyme)'$PS1
+
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+# install: https://github.com/nvbn/thefuck
+eval $(thefuck --alias)
+

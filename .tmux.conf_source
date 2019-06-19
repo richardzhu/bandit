@@ -3,6 +3,11 @@ set -g prefix C-a
 unbind-key C-b
 bind-key C-a send-prefix
 
+# Move windows left and right
+# https://superuser.com/questions/343572/how-do-i-reorder-tmux-windows
+bind-key -n C-S-Left swap-window -t -1
+bind-key -n C-S-Right swap-window -t +1
+
 # force reload of config file
 unbind r
 bind r source-file ~/.tmux.conf

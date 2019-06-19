@@ -1,0 +1,5 @@
+#!/usr/bin/env osascript
+
+tell application "System Events" to set thePID to (unix id of process "System Events")
+set killCMD to ("kill -9 " & thePID) as text
+do shell script killCMD with administrator privileges

@@ -1,0 +1,11 @@
+#!/bin/bash
+zero=0;
+remaining="$(kubectl get pods | grep dask-richard | grep Pending | wc -l)";
+
+if [ $remaining -eq $zero ]; then
+    # succeed if no remaining, so we can use untilsucceed
+    exit 0;
+else
+    # otherwise, fail
+    exit 1;
+fi

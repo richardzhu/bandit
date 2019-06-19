@@ -2,6 +2,7 @@
 source ~/code/whisper/infrastructure/repo/bashrc
 
 alias cw='cd ~/code/whisper && source venv/bin/activate'
+alias cws='cd ~/code/whisper && source venv/bin/activate && cd ~/code/whisper_system'
 alias wcloud='whisper_cloud'
 alias myjobs='whisper_cloud ls | grep richardzhu'
 
@@ -11,6 +12,7 @@ export PYTHONPATH=$PYTHONPATH:"/home/richardzhu/code"
 # CD aliases
 alias cdc='cd ~/code'
 alias cdw='cd ~/code/whisper'
+alias cdws='cd ~/code/whisper_system'
 alias cdn='cd ~/notes'
 
 # Sync aliases
@@ -19,14 +21,23 @@ alias spush='gcloud compute scp --recurse ~/code/my_code richardzhu@richardzhu-h
 alias spull='gcloud compute scp --recurse richardzhu@richardzhu-hack:~/code/my_code ~/code'
 
 # Linting aliases
-alias ilint='watch -n1.0 ~/code/whisper/monorepo lint'
+alias ilint='watch -n2.0 ~/code/whisper/monorepo lint'
+alias ilints='cws && watch -n2.0 "python -m ci.lint --diff_only"'
 
 export ANDROID_NDK_HOME="/usr/local/share/android-ndk"
 export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
 export NDK_ROOT="/usr/local/share/android-ndk"
+export NRF_SDK_14="~/SDKs/nrf_sdk"
 # https://stackoverflow.com/questions/21964709/how-to-set-or-change-the-default-java-jdk-version-on-os-x
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 export PATH="/usr/local/share/android-sdk/platform-tools":$PATH
 export PATH="~/code/whisper/inference/hexagon/sdk/scripts":$PATH
+export PATH="/Users/richardzhu/SDKs/nrf_cli/nrfjprog":$PATH
 
+# fix for make -j dfu in king_som
+export GCC_PATH=/usr/local/gcc-arm-none-eabi-4_9-2015q3/bin
+export PATH=$GCC_PATH:$PATH
+
+export WHISPER_SYSTEM_ROOT=/Users/richardzhu/code/whisper_system;
+source /Users/richardzhu/code/whisper_system/scripts/bashrc
