@@ -98,7 +98,10 @@ alias res='cddw && cd research'
 alias work='cddw && cd work'
 
 # SSH!
-alias sshr='ssh richard@richardzhu.duckdns.org -p 9069'
+# home comp:
+alias sshh='ssh richardzhu@richardzephyr.duckdns.org'
+# LIFT cluster:
+alias sshl='ssh -L 16006:127.0.0.1:6006 richardzhu@lift.cs.uchicago.edu'
 
 # Pandoc guide
 # Latex template found at: https://github.com/Wandmalfarbe/pandoc-latex-template
