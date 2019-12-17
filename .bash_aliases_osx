@@ -1,4 +1,12 @@
 ### OSX-specific bashrc
+
+# Homebrew path first
+export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:$PATH
+
+alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
 alias mvim='vim'
 
 # Fix for pbpaste new line
@@ -8,3 +16,12 @@ alias paste='echo "$(pbpaste)" >> '
 # Fix for VSCode repeat key
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
+# Notify me when long-running command finishes!
+# Mac-only: http://frantic.im/notify-on-completion
+function f_notifyme {
+  LAST_EXIT_CODE=$?
+  CMD=$(fc -ln -1)
+  # No point in waiting for the command to complete
+  notifyme "$CMD" "$LAST_EXIT_CODE" &
+}
+export PS1='$(f_notifyme)'$PS1

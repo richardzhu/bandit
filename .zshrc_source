@@ -14,12 +14,6 @@
 # Git conveniences
 export GIT_MERGE_AUTOEDIT=no
 
-# Homebrew path first
-export PATH=/usr/local/sbin:$PATH
-export PATH=/usr/local/bin:$PATH
-alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
-alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-
 export ETS_TOOLKIT=qt4
 
 # using Sublime as editor for commands
@@ -180,8 +174,7 @@ export PATH=$HOME/bandit/shell-scripts:$PATH
 
 # Load personal and work aliases
 source ~/bandit/.bash_aliases
-source ~/bandit/.bash_aliases_osx
-source ~/bandit/.bash_whisper
+source ~/bandit/.bash_aliases_linux
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -195,16 +188,6 @@ export PATH=$GOPATH/bin:$PATH
 
 # Emacs install (from Homebrew)
 alias emacs="/usr/local/Cellar/emacs/26.1_1/bin/emacs -nw"
-
-# Notify me when long-running command finishes!
-# Mac-only: http://frantic.im/notify-on-completion
-function f_notifyme {
-  LAST_EXIT_CODE=$?
-  CMD=$(fc -ln -1)
-  # No point in waiting for the command to complete
-  notifyme "$CMD" "$LAST_EXIT_CODE" &
-}
-export PS1='$(f_notifyme)'$PS1
 
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
