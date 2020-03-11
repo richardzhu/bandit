@@ -175,18 +175,24 @@ export PATH=$HOME/bandit/shell-scripts:$PATH
 # Load personal and work aliases
 # handling the OS properly
 # https://stackoverflow.com/questions/3466166/how-to-check-if-running-in-cygwin-mac-or-linux
+# https://stackoverflow.com/questions/394230/how-to-detect-the-os-from-a-bash-script
 source ~/bandit/.bash_aliases
-
-if [ "$(uname)" == "Darwin" ]; then
-    # Do something under Mac OS X platform        
-    source ~/bandit/.bash_aliases_osx
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-    # Do something under GNU/Linux platform
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    # Linux
     source ~/bandit/.bash_aliases_linux
-elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
-    # Do something under 32 bits Windows NT platform
-elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
-    # Do something under 64 bits Windows NT platform
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    # Mac OSX
+    source ~/bandit/.bash_aliases_osx
+elif [[ "$OSTYPE" == "cygwin" ]]; then
+    # POSIX compatibility layer and Linux environment emulation for Windows
+elif [[ "$OSTYPE" == "msys" ]]; then
+    # Lightweight shell and GNU utilities compiled for Windows (part of MinGW)
+elif [[ "$OSTYPE" == "win32" ]]; then
+    # I'm not sure this can happen.
+elif [[ "$OSTYPE" == "freebsd"* ]]; then
+    # ...
+else
+    # Unknown.
 fi
 
 # If you come from bash you might have to change your $PATH.
