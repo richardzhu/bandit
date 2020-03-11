@@ -1,0 +1,15 @@
+{
+  "notebook:clear-all-outputs": {
+    "command": "notebook:hide-all-cell-outputs",
+    "keys": [
+      "Ctrl L"
+    ]
+  },
+  "runmenu:restart-and-run-all": {
+    "command": "runmenu:restart-and-run-all",
+    "keys": ["Shift 0", "Shift 0"],
+    "selector": "[data-jp-code-runner]",
+    "title": "Run",
+    "category": "Run Menu"
+  }
+}

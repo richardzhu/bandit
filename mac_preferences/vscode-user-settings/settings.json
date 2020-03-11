@@ -1,0 +1,24 @@
+{
+    "python.pythonPath": "~/code/whisper/venv/bin/python",
+    "python.linting.flake8Args": ["--config=~/code/whisper/.flake8"],
+    "window.zoomLevel": 1,
+    "editor.minimap.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.statusBar.enabled": false,
+    "workbench.colorTheme": "Solarized Dark",
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?_",
+    "diffEditor.renderSideBySide": false,
+    "[cpp]": {
+        "editor.tabSize": 2,
+        "editor.rulers": [100],
+    },
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.rulers": [100],
+    },
+    "workbench.colorCustomizations": {
+        // "editorRuler.foreground": "#ff4081"
+    }
+}

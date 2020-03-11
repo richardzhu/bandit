@@ -19,4 +19,5 @@ cp -r ~/.jupyter ~/bandit/mac_preferences/jupyter-backup
 
 # VSCode settings
 cp -r ~/Library/Application\ Support/Code/User ~/bandit/mac_preferences/vscode-user-settings
+rm -rf mac_preferences/vscode-user-settings/**/*Storage/
 
