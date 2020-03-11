@@ -11,12 +11,15 @@
 # PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
 # export PATH
 
+# Homebrew path at end of file, so we put it first!!!
+# I LOVE HOMEBREWWWWWWWWWWWWWW
+# TODO: this needs to go after pyenv path changing in order to get jupyter lab & pandoc & exporting ipynb to pdf working...
+export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:$PATH
+
 # Git conveniences
 export GIT_MERGE_AUTOEDIT=no
 
-# Homebrew path first
-export PATH=/usr/local/sbin:$PATH
-export PATH=/usr/local/bin:$PATH
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
@@ -185,7 +188,6 @@ export PATH=$HOME/bandit/shell-scripts:$PATH
 # Load personal and work aliases
 source ~/bandit/.bash_aliases
 source ~/bandit/.bash_aliases_osx
-source ~/bandit/.bash_whisper
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -214,4 +216,26 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # install: https://github.com/nvbn/thefuck
 eval $(thefuck --alias)
+
+# >>> conda initialize >>>
+export CONDA_VERSION="anaconda3-2019.03"
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/richardzhu/.pyenv/versions/$CONDA_VERSION/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/richardzhu/.pyenv/versions/$CONDA_VERSION/etc/profile.d/conda.sh" ]; then
+        . "/Users/richardzhu/.pyenv/versions/$CONDA_VERSION/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/richardzhu/.pyenv/versions/$CONDA_VERSION/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+conda deactivate
+
+# Elowitz environment setup
+export EQTKHOME="/Users/richardzhu/code/eqtk"
+export PROMISYSHOME="/Users/richardzhu/code"
+export PYTHONPATH="$EQTHOME:$EQTKHOME/src/python:$PROMISYSHOME:$PYTHONPATH"
 
