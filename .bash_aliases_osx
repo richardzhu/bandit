@@ -8,3 +8,17 @@ alias paste='echo "$(pbpaste)" >> '
 # Fix for VSCode repeat key
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
+# Fix to use brew pandoc instead of pyenv-anaconda pandoc
+alias pandoc=/usr/local/bin/pandoc
+
+# Fix for macOS catalina wifi issues...
+alias fixmywifi='open /System/Library/CoreServices/Captive\ Network\ Assistant.app'
+
+# MATLAB
+alias matlab='/Applications/MATLAB_R2019b.app/bin/matlab'
+function matlab_run() {
+    matlab -nodesktop -nosplash -r "run('$1')"
+}
+
+# Jekyll/Gem install: https://jekyllrb.com/docs/installation/macos/
+export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin

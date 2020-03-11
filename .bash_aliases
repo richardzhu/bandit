@@ -58,6 +58,7 @@ alias gc="git commit -m"
 alias idk="git add . && git commit -m 'standard commit message' && git push"
 alias lolwtf="git add . && git commit -m 'yolo' && git push"
 alias yolo='git commit -m "$(curl -s whatthecommit.com/index.txt)"'
+alias yolop='yolo && git push'
 # cool command to get all branches ordered by most recent commit
 # https://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
 alias grr="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"

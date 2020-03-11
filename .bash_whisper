@@ -27,7 +27,9 @@ alias ilints='cws && watch -n2.0 "python -m ci.lint --diff_only"'
 export ANDROID_NDK_HOME="/usr/local/share/android-ndk"
 export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
 export NDK_ROOT="/usr/local/share/android-ndk"
-export NRF_SDK_14="~/SDKs/nrf_sdk"
+export NRF_SDK_14="/Users/richardzhu/SDKs/nrf_sdk"
+export NRF_COMMAND_LINE_TOOLS="/Users/richardzhu/SDKs/nrf_cli"
+
 # https://stackoverflow.com/questions/21964709/how-to-set-or-change-the-default-java-jdk-version-on-os-x
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
