@@ -192,8 +192,8 @@ source ~/bandit/.bash_aliases_osx
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Go install: 2019/03/26
-export PATH=/usr/local/go/bin:$PATH
+# Go installed binary 2019/03/26 => Go installed Homebrew 2020/03/17
+# export PATH=/usr/local/go/bin:$PATH
 export GOPATH=$HOME/go
 
 # GOPATH bin files! for Skicka
