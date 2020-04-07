@@ -24,5 +24,5 @@ function matlab_run() {
 export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
 
 # Boost/RDKit Mac install for CFM-ID: https://sourceforge.net/p/cfm-id/wiki/Home/#on-macos
-export BOOST_ROOT=$HOME/code/boost_1_55_0
-export RDBASE=$HOME/code/RDKit_2013_09_1
+# export BOOST_ROOT=$HOME/code/boost_1_55_0
+# export RDBASE=$HOME/code/RDKit_2013_09_1
