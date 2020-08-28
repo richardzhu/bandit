@@ -187,7 +187,15 @@ export PATH=$HOME/bandit/shell-scripts:$PATH
 
 # Load personal and work aliases
 source ~/bandit/.bash_aliases
-source ~/bandit/.bash_aliases_osx
+if command apt > /dev/null; then
+    source ~/bandit/.bash_aliases_linux
+elif command freebsd-version > /dev/null; then
+    echo 'No additional bash aliases for freebsd'
+elif [[ `uname` == "Darwin" ]]; then
+    source ~/bandit/.bash_aliases_osx
+else
+    echo 'Unknown OS!'
+fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
