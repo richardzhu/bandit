@@ -86,6 +86,7 @@ alias reboot="sudo shutdown -r now"
 alias off="sudo shutdown -h now"
 
 # Navigate to folders
+alias cdc='cd ~/code'
 alias cdd='cd ~/Dropbox'
 alias cddc='cd ~/Dropbox/Classes'
 alias cddn='cd ~/Dropbox/Notes'
