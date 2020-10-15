@@ -8,6 +8,7 @@ now = datetime.datetime.now()
 cwd = os.getcwd()
 
 base_dir = os.path.expanduser(cwd)
+base_dir = os.path.expanduser('~/Dropbox/Notes')
 
 md_basename = now.strftime('%Y_%m_%d_urls.md')
 md_path = os.path.join(base_dir, md_basename)
