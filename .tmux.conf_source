@@ -52,3 +52,25 @@ bind-key -T copy-mode-vi C-k select-pane -U
 bind-key -T copy-mode-vi C-l select-pane -R
 # bind-key -T copy-mode-vi C-\ select-pane -l
 
+# useful tidbits from:
+# https://zserge.com/posts/tmux/
+# https://news.ycombinator.com/item?id=23003603
+set-option -g default-terminal screen-256color
+set-option -g renumber-windows on
+set -g history-limit 10000
+set -s escape-time 0
+
+# Inherit PWD
+bind '%' split-window -h -c '#{pane_current_path}'
+bind '"' split-window -v -c '#{pane_current_path}'
+bind c new-window -c '#{pane_current_path}'
+
+# List of Tmux Plugin Manager plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
+
