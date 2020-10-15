@@ -22,3 +22,13 @@ function matlab_run() {
 
 # Jekyll/Gem install: https://jekyllrb.com/docs/installation/macos/
 export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
+
+# Notify me when long-running command finishes!
+# Mac-only: http://frantic.im/notify-on-completion
+function f_notifyme {
+  LAST_EXIT_CODE=$?
+  CMD=$(fc -ln -1)
+  # No point in waiting for the command to complete
+  notifyme "$CMD" "$LAST_EXIT_CODE" &
+}
+export PS1='$(f_notifyme)'$PS1

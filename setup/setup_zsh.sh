@@ -22,3 +22,6 @@ else
 	echo "oh my zsh is already installed";
 fi
 
+# Install oh-my-zsh plugins
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+
