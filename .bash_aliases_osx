@@ -11,6 +11,9 @@ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 # Fix to use brew pandoc instead of pyenv-anaconda pandoc
 alias pandoc=/usr/local/bin/pandoc
 
+# libreoffice based on `brew cask install libreoffice`
+alias libreoffice=/Applications/LibreOffice.app/Contents/MacOS/soffice
+
 # Fix for macOS catalina wifi issues...
 alias fixmywifi='open /System/Library/CoreServices/Captive\ Network\ Assistant.app'
 
@@ -32,3 +35,21 @@ function f_notifyme {
   notifyme "$CMD" "$LAST_EXIT_CODE" &
 }
 export PS1='$(f_notifyme)'$PS1
+
+# pyenv virtualenv
+eval "$(pyenv virtualenv-init -)"
+
+# sleep in X minutes (https://apple.stackexchange.com/questions/158853/schedule-a-mac-to-sleep-just-one-time)
+function sleep-in() {
+    local minutes=$1
+    local datetime="`date -v+${minutes}M +"%m/%d/%y %H:%M:%S"`"
+    sudo pmset schedule sleep "$datetime"
+}
+function sleep-cancel-all() {
+	NUM_OF_SLEEPS=$(pmset -g sched | wc -l)
+	if [[ $NUM_OF_SLEEPS -gt 0 ]]; then
+		# The first line of output is a header, ignore it.
+		NUM_OF_SLEEPS=$(expr $NUM_OF_SLEEPS - 1)
+		seq $NUM_OF_SLEEPS | xargs -Iz sudo pmset schedule cancel 0
+	fi
+}
