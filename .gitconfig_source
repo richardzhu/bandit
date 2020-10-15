@@ -1,0 +1,21 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Richard Zhu
+	email = rzhu.96@gmail.com
+[alias]
+	unstage = reset --
+[submodule]
+	recurse = true
+
+# brew install git-delta
+# https://github.com/dandavison/delta
+# https://news.ycombinator.com/item?id=22996374
+[core]
+    pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Monokai Extended'
+[interactive]
+    diffFilter = delta --color-only
+
