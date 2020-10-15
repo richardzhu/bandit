@@ -170,7 +170,9 @@ PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # tmuxinator!
-source ~/.bin/tmuxinator.zsh
+if test -f "~/.bin/tmuxinator.zsh"; then
+  source ~/.bin/tmuxinator.zsh
+fi
 
 # fixup ruby shit
 export GEM_HOME=$HOME/gems
@@ -187,9 +189,9 @@ export PATH=$HOME/bandit/shell-scripts:$PATH
 
 # Load personal and work aliases
 source ~/bandit/.bash_aliases
-if command apt > /dev/null; then
+if command -v apt > /dev/null; then
     source ~/bandit/.bash_aliases_linux
-elif command freebsd-version > /dev/null; then
+elif command -v freebsd-version > /dev/null; then
     echo 'No additional bash aliases for freebsd'
 elif [[ `uname` == "Darwin" ]]; then
     source ~/bandit/.bash_aliases_osx
@@ -208,22 +210,14 @@ export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 
 # Emacs install (from Homebrew)
-alias emacs="/usr/local/Cellar/emacs/26.1_1/bin/emacs -nw"
-
-# Notify me when long-running command finishes!
-# Mac-only: http://frantic.im/notify-on-completion
-function f_notifyme {
-  LAST_EXIT_CODE=$?
-  CMD=$(fc -ln -1)
-  # No point in waiting for the command to complete
-  notifyme "$CMD" "$LAST_EXIT_CODE" &
-}
-export PS1='$(f_notifyme)'$PS1
+# alias emacs="/usr/local/Cellar/emacs/26.1_1/bin/emacs -nw"
 
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # install: https://github.com/nvbn/thefuck
-eval $(thefuck --alias)
+if [ -x "$(thefuck --alias &> /dev/null)" ]; then
+  eval $(thefuck --alias)
+fi
 
 # >>> conda initialize >>>
 export CONDA_VERSION="anaconda3-2019.03"
@@ -240,7 +234,9 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-conda deactivate
+if [ -x "$(conda --version) &> /dev/null)" ]; then
+  conda deactivate
+fi
 
 # Elowitz environment setup
 export EQTKHOME="/Users/richardzhu/code/eqtk"
