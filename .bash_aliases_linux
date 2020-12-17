@@ -5,3 +5,5 @@
 # https://askubuntu.com/questions/16336/how-to-get-coloured-terminal-over-ssh
 # https://superuser.com/questions/183876/how-do-i-get-ls-color-auto-to-work-on-mac-os-x
 alias l="ls -Gphaltr --color=auto"
+
+eval "$(pyenv virtualenv-init -)"

@@ -199,7 +199,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Go install: 2019/03/26
-export PATH=/usr/local/go/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 
 # GOPATH bin files! for Skicka
