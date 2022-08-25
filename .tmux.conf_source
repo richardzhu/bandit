@@ -74,3 +74,11 @@ set -g @plugin 'tmux-plugins/tmux-continuum'
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
 
+# Switching between sessions
+# https://waylonwalker.com/tmux-fzf-session-jump/
+bind C-j new-window -n "session-switcher" "tmux list-sessions | sed -E 's/:.*$//' | grep -v \"^$(tmux display-message -p '#S')\$\" | fzf --reverse | xargs tmux switch-client -t"
+bind C-j display-popup -E "tmux list-sessions | sed -E 's/:.*$//' | grep -v \"^$(tmux display-message -p '#S')\$\" | fzf --reverse | xargs tmux switch-client -t"
+
+# Automatic reordering of windows
+set-option -g renumber-windows on
+
